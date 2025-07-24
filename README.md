@@ -7,7 +7,7 @@ I built it using only HTML and CSS as a practice project.
 
 - `index.html` — The main page.
 - `style.css` — All the styles.
-- `images/` — Photos used for the layout.
+- `Photos/` — Photos used for the layout.
 
 ## 🎯 Goal
 
