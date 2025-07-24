@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benjamin Hardman</title>
+    <link rel="icon" type="image/x-icon" href="https://images.squarespace-cdn.com/content/v1/57d083042e69cf8d9a5e056e/1563462957656-CIH8FF2PIG24V9ME0Q06/favicon.ico?format=100w">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="lefthand">
+            <a id="name" href="#"><h2>BENJAMIN<br>HARDMAN</h2></a>
+        </div>
+    
+        <div class="navbar">
+            <div class="logo"></div>
+        
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        
+            <div class="righthand" id="navLinks">
+                <a href="#" class="num1">HOME</a>
+                <a href="#" class="link">COURSES</a>
+                <a href="#" class="link">PRINTS</a>
+                <a href="#" class="link">EXPEDITIONS</a>
+                <a href="#" class="link">ABOUT</a>
+                <a href="#" class="link">CONTACT</a>
+            </div>
+        </div>
+
+    </header>
+    <main>
+        <div class="slider">
+            <img class="slide" src="Photos/front-end photo 1.jpg">
+            <img class="slide" src="Photos/front-end photo 2.jpg">
+            <img class="slide" src="Photos/front-end photo 3.jpg">
+            <img class="slide" src="Photos/front-end photo 4.jpg">
+            <img class="slide" src="Photos/front-end photo 5.jpg">
+            <img class="slide" src="Photos/front-end photo 6.jpg">
+            <img class="slide" src="Photos/front-end photo 7.jpg">
+            <img class="slide" src="Photos/front-end photo 8.jpg">
+        
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+        </div>
+
+        <div class="main">
+            <img src="Photos/B.H.jpg" alt="Image" class="person">
+            <div class="doc">
+                <p><span id="i1">BENJAMIN HARDMAN</span></p>
+                <p><span id="i2">photographer and natural history cinematographer.</span></p>
+                <p><span id="i3">Based in Iceland & specialising in photography and film productions in the Polar Regions.</span></p>
+            </div>
+        </div>
+        <div class="links">
+            <a class="linkat" href="#"><img class="lnks" src="Photos/Instagram Logo.png"></a>
+            <a class="linkat" href="#"><img class="lnks" src="Photos/YouTube Logo.png"></a>
+            <a class="linkat" href="#"><img class="lnks" src="Photos/Facebook Logo.png"></a>
+            <a class="linkat" href="#"><img class="lnks" src="Photos/Twitter Logo.png"></a>
+        </div>
+    </main>
+     
+</body>
+<script>
+    function toggleMenu() {
+        document.getElementById("navLinks").classList.toggle("show");
+    }
+</script>
+<script>
+    let current = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active');
+            if (i === index) slide.classList.add('active');
+        });
+    }
+
+    function nextSlide() {
+        current = (current + 1) % slides.length;
+        showSlide(current);
+    }
+
+    function prevSlide() {
+        current = (current - 1 + slides.length) % slides.length;
+        showSlide(current);
+    }
+
+    // Start with first slide
+    showSlide(current);
+</script>
+
+</html>
