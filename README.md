@@ -17,7 +17,3 @@ To improve my frontend skills by recreating a modern, clean photography portfoli
 
 You can visit the original website here:  
 [https://www.benjaminhardman.com](https://www.benjaminhardman.com)
-
-## 🚀 Live Preview (optional)
-
-(You can add the link here after setting up GitHub Pages)
